@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------------------------------------------------HEAD----------------------------------------------------->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SbS Instructions</title>
+    <link rel="stylesheet" type="text/css" href="../static/Anleitung_gespeichert_und_hochgeladen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins">
+</head>
+
+
+<!----------------------------------------------------BODY----------------------------------------------------->
+
+<body>
+    
+    <!-- Header mit Logo und Buttons -->
+    <div class="header">
+        <div class="boxumAErstellen" onclick="location.href='Add_page.html'">
+            <input class="aErstellen" type="button" >
+        </div>
+
+        <div class="boxumProfil"  onclick="location.href='Mein_Profil.html'">
+            <input class="profil" type="button">
+        </div>       
+    </div>
+
+    <div class="logocontainer">
+       <img class="logo" src="../static/Logo.svg" type="button" onclick="location.href='./Startbildschirm.html'">
+        
+    </div>
+
+
+    <!-- Der Bodybody -->    
+
+<div class="body">
+
+    <!-- Systemstatuszeile  -->
+    <div class="statuscontainer">
+        <br /><br />
+        <ul class="list-unstyled multi-steps">
+        <li>
+            <div style="margin-left: -4px;" >Infos</div>
+        </li>
+        <li>
+            <div style="margin-left: -18px;" >Schritte</div>
+        </li>
+        <li class="is-active">
+            <div style="margin-left: -7px;" >Fertig</div>
+        </li>
+        </ul>
+    <div>
+        <h1 class = infoText>Anleitung gespeichert und hochgeladen!  </h1>
+    </div>
+    </div>
+        <!-- Grüner Haken  -->
+    <div class="grünerHaken">
+        <img class="grünerHaken" src="../static/GrünerHaken.svg">
+
+    </div>
+    <!-- Button Startseite + Anleitungen  -->
+    <div class=" buttons">
+        <button class="buttonStartseite" onclick="location.href='./Startbildschirm.html'">Zur Startseite</button>
+    <button class="buttonAnleitungen" onclick="location.href='./Meine_Anleitungen.html'">Meine Anleitungen</button>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

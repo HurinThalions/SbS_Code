@@ -1,0 +1,435 @@
+/* Allgemeines */
+
+body {
+    font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    background-color: #F3F5F6;
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+}
+
+p {
+    font-size: 20px;
+    padding: none;
+}
+
+::placeholder {
+    color: #606060;
+}
+
+.text {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.autoText {
+    border: 1px solid #000;
+    border-radius: 10px;
+    height: 25px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #fff;
+
+}
+
+/* --------------------------------Header------------------------------- */
+
+body {
+    margin: 0;   
+}
+
+.header {
+    display: flex;
+    justify-content: right;
+    height: 120px;
+    background-color: #BCBCBC;
+    background-image: linear-gradient(#FFFFFF, #A8A8A8);
+    box-shadow: 0px 2px 5px #c3c3c3;
+}
+
+.boxumProfil, .boxumAErstellen {
+    /* Positionierung der Box */
+    position: relative;
+
+    /* Einbetten der Box in den Header */
+    height: inherit;
+    min-width: 110px;
+}
+
+.boxumProfil:hover, .boxumAErstellen:hover {
+    cursor: pointer;
+    background-image: linear-gradient(#d6e1e875, #1d415967);
+}
+
+.profil, .aErstellen{
+    /* Positionierung der Buttons in der Mitte der Box 'boxumProfil' */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    /* Groeße des Buttons */
+    height: 50%;
+    width: 50%;
+    max-height: 40px;
+    max-width: 40px;
+
+    /* Runder Button */
+    border-radius: 50%;
+    border: 0px;
+    cursor: pointer;
+}
+
+.profil {
+    background-image: url("Profil_Logo.svg");
+    background-size: cover;
+    background-color: white;
+}
+
+.aErstellen {
+    background-image: url("Anleitunghinzufuegen.svg");
+    background-size: cover;
+    background-color: white;
+}
+
+.logocontainer {
+    display: flex;
+    justify-content: left;
+    height: 120px;
+    position: absolute;
+    top: 0.25%;
+    left: 3%;
+}
+
+.logocontainer:hover {
+    cursor: pointer;
+}
+
+/* --------------------------------Hintergrund---------------------------- */
+.hintergrund {
+    background-image:url(SVG_Hintergrund1.svg);
+    margin: 0;
+    background-position-y: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: static;
+    width: 100%;
+    height: 100%;
+}
+
+/* -----------------------------Vollbild Overlay----------------------------- */
+
+#overlayVollbild {
+    position: fixed;
+    display: none;
+    width: 100%; 
+    height: 100%;
+    margin: 0;
+    backdrop-filter: blur(2px);
+    z-index: 2;
+}
+
+.vollbild {
+    background-image: url(Ofenkartoffeln.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    border: 2px solid #000;
+    width: 90%;
+    height: 90%;
+}
+
+.schliessen {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* -----------------------------Schritte Overlay----------------------------- */
+
+#overlaySchritte {
+    position: fixed;
+    display: none;
+    width: 100%; 
+    height: 100%;
+    margin: 0;
+    backdrop-filter: blur(2px);
+    z-index: 2;
+}
+
+.schritte {
+    background-color: #fff;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    border: 2px solid #000;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.schritteFenster {
+    height: 100px;
+    width: 90%;
+    margin: 5%;
+}
+
+.auflistungSchritt {
+    background-position: center;
+    float: left;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+    width: 19%;
+    text-align: center;
+}
+
+#Bild1, #Bild2, #Bild3, #Bild4, #Bild5, #Bild6, #Bild7 {
+    object-fit: cover;
+    border: 1px solid #000;
+    width: 100%;
+    height: 250px;
+}
+
+/* -------------------------------Überblickicon------------------------------ */
+
+#ueberblick {
+    justify-content: right;
+    width: 80%;;
+    margin-top: 30px;
+    margin-right: 10%;
+    margin-left: 10%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#sizeicon {
+    position: absolute;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+}
+
+/* --------------------------Anzeigen Schritt X----------------------------- */
+
+.rahmen {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: none;
+    
+}
+
+.aufteilung {
+    display: table;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#linkeZelle {
+    display: table-cell;
+    width: 45%;
+    margin-right: 5%;
+}
+
+#titel {
+    font-size: 18px;
+}
+
+#schritt {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 35px;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.abstand {
+    padding-right: 10px;
+    font-size: 28px;
+}
+
+.informationsrahmen {
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 90%;
+    min-height: 100px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.informationsrahmen2 {
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 90%;
+    min-height: 100px;
+    padding: 10px;
+}
+
+#komponenten {
+    margin-bottom: 0;
+}
+
+.einzelneKomponente {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.komponentenbild {
+    width: 40%;
+    height: 100px;
+    background-position: center;
+    object-fit: cover;
+    margin-right: 8%;
+}
+
+#komponente1 {
+    margin-bottom: 5%;
+}
+
+.unterueberschrift {
+    margin-bottom: 15px;
+}
+
+.rechteZelle {
+    display: table-cell;
+    background-color: #FFFFFF;
+    text-align: center;
+    border: 1px solid #000;
+    width: 50%;
+    height: 100%;
+}
+
+.rechteZelle:hover {
+    cursor: pointer;
+}
+
+#groesseBild {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: fill;
+}
+
+#BildSchritt1 {
+    background-image: url(Ofenkartoffeln.jpg);
+    background-size: cover;
+    background-position:center;
+}
+
+#BildSchritt2 {
+    background-image: url(GeschnitteneGurkeKnoblauch.jpeg);
+    background-size: cover;
+    background-position:center;
+}
+
+#BildSchritt3 {
+    background-image: url(Zaziki.jpeg);
+    background-size: cover;
+    background-position:center;
+}
+
+#BildSchritt4 {
+    /* background-image: url(Ofenkartoffeln.jpg);
+    background-size: cover;
+    background-position:center; */
+}
+
+#BildSchritt5 {
+    background-image: url(Ofenkartoffeln.jpg);
+    background-size: cover;
+    background-position:center;
+}
+
+#BildSchritt6 {
+    background-image: url(Seehecht_angeordnet.jpg);
+    background-size: cover;
+    background-position:center;
+}
+
+.vorzurueck {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding-top: 20px;;
+
+}
+
+.progress-bar {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+}
+
+.buttonkleinlinks {
+    width: 50px;
+    height: 40px;
+}
+
+.buttonkleinrechts {
+    width: 50px;
+    height: 40px;
+}
+
+.buttonkleinlinks:hover, .buttonkleinrechts:hover {
+    width: 50px;
+    height: 50px;
+}
+
+#fortschrittsanzeige {
+    width: 80%;
+    height: 30px;
+}
+
+#polygondunkel {
+    width: 30px;
+    height: 30px;
+    fill: #A65756;
+}
+
+#polygonhell {
+    
+    width: 30px;
+    height: 30px;
+    fill: #D9B4B4;
+}
+
+.fortschrittszahl{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 26px;
+
+}

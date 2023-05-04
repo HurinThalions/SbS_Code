@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------------------------------------------------HEAD----------------------------------------------------->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SbS - Anleitung durchgehen</title>
+    <link rel="stylesheet" type="text/css" href="../static/Anleitung_durchgehen.css">  <!-- Referrenz zu CSS Seite -->
+    <script src="../static/Anleitung_durchgehen.js"></script> <!-- Referrenz zu JavaScript Seite --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins">
+
+</head>
+
+<!----------------------------------------------------BODY----------------------------------------------------->
+
+<body>    
+
+    <!-- Divider für Vollbild-Popup -->
+    <div id="overlayVollbild">
+        <div class="vollbild">
+            <img class="schliessen" src="../static/closecircle.svg" onclick="popupOffV()">
+        </div>
+    </div>
+
+      <!-- Divider für Schritte-Popup -->
+      <div id="overlaySchritte">
+        <div class="schritte">
+            <img class="schliessen" src="../static/closecircle.svg" onclick="popupOffS()">
+            <div id="schrittefenster">
+                <div class="auflistungSchritt" onclick="location.href='Anleitung_durchgehen.html'">
+                    <img id="Bild1" src="../static/Ofenkartoffeln.jpg">
+                    <p>Schritt 1</p>
+                </div>
+                <div class="auflistungSchritt" onclick="location.href='Anleitung_durchgehen2.html'">
+                    <img id="Bild2" src="../static/GeschnitteneGurkeKnoblauch.jpeg">
+                    <p>Schritt 2</p>
+                </div>
+                <div class="auflistungSchritt" onclick="location.href='Anleitung_durchgehen3.html'">
+                    <img id="Bild3" src="../static/Zaziki.jpeg">
+                    <p>Schritt 3</p>
+                </div>
+                <div class="auflistungSchritt" onclick="location.href='Anleitung_durchgehen4.html'">
+                    <img id="Bild4">
+                    <p>Schritt 4</p>
+                </div>
+                <div class="auflistungSchritt" onclick="location.href='Anleitung_durchgehen5.html'">
+                    <img id="Bild5" src="../static/FischPfanne.jpeg">
+                    <p>Schritt 5</p>
+                </div>
+                <div class="auflistungSchritt" onclick="location.href='Anleitung_durchgehen6.html'">
+                    <img id="Bild6" src="../static/Seehecht_angeordnet.jpg">
+                    <p>Schritt 6</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Header mit Logo und Buttons -->
+    <div class="header">
+        <div class="boxumAErstellen">
+            <input class="aErstellen" type="button" onclick="location.href='Add_page.html'">
+        </div>
+
+        <div class="boxumProfil">
+            <input class="profil" type="button" onclick="location.href='Mein_Profil.html'">
+        </div>       
+    </div>
+
+    <div class="logocontainer" onclick="location.href='Startbildschirm.html'">
+        <img class="logo" src="../static/Logo.svg">
+    </div>
+
+    <!-- Hintergrund -->
+    <div class="hintergrund">
+
+        <!-- Seiten-Icon -->
+        <button id="ueberblick">
+            <img id="sizeicon" src="../static/Overview.svg" onclick="popupOnS()">
+        </button>
+
+        <!-- --------------------------Anzeigen Schritt X---------------------------- -->
+
+        <div class="rahmen">
+            <div class="aufteilung">
+                <div id="linkeZelle">
+
+                    <div>
+                        <div class="titel">{{ anleitungstitel }}</div>
+                        <div id="schritt">
+                            <p class="abstand">Schritt 4:</p> <p class="abstand"><u>{{ schritt4 }}</u></p>
+                        </div>
+                    </div>
+
+                    <div id="beschreibung">
+                        <div class="unterueberschrift">Beschreibung:</div>
+                        <div class="titel">
+                            <div class="informationsrahmen">
+                                {{ schritt4beschreibung }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="komponenten">
+                        <div class="unterueberschrift">Komponenten:</div>
+                        <div class="informationsrahmen2" >
+                            <div id="komponente1" class="einzelneKomponente">
+                                <img  class="komponentenbild" src="../static/Seehecht_roh.jpeg">
+                                <p>{{ komp0 }}</p>                               
+                            </div>
+
+                            <div id="komponente" class="einzelneKomponente">
+                                <img  class="komponentenbild" src="../static/Souflaki.jpeg">
+                                <p>{{ komp1 }}</p>                               
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="rechteZelle" id="BildSchritt4" onclick="popupOnV()">
+                        <p>Kein Bild verfügbar</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="vorzurueck">
+            <img class="buttonkleinlinks" src="../static/Back button.svg" onload="fortschritt(4,6)"  onclick="location.href='Anleitung_durchgehen3.html'">
+            <svg id="fortschrittsanzeige" onload="fortschritt(4,6)">
+            </svg>
+            <img class="buttonkleinrechts" src="../static/weiter.svg"  onclick="location.href='Anleitung_durchgehen5.html'">
+        </div>
+        <div class="fortschrittszahl">
+            4/6
+        </div>
+    </div>
+
+</body>
+
+</html>
